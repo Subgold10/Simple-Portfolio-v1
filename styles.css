@@ -1,0 +1,819 @@
+body {
+  font-family: "Roboto Slab", serif;
+  color: white;
+  background-color: #0e0428;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  width: 99%;
+  background-color: rgba(23, 7, 57, 0.886);
+  z-index: 5;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+/* Logo and Portfolio text styles */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  gap: 15px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.portfolio-text {
+  font-family: "Amatic SC", cursive;
+  font-size: 1.8em;
+  font-weight: bold;
+  animation: colorChange 3s infinite alternate;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Add this to allow wrapping */
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Amatic SC", cursive;
+  font-size: 24px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #68bdca;
+  transform: scale(1.2);
+  display: inline-block;
+}
+@media screen and (max-width: 768px) {
+  .main-nav {
+    padding: 10px 15px;
+  }
+
+  .nav-links {
+    gap: 10px;
+    font-size: 18px;
+  }
+
+  .portfolio-text {
+    font-size: 1.8em;
+  }
+
+  .theme-btn {
+    font-size: 20px;
+  }
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.theme-btn:hover {
+  transform: scale(1.5);
+}
+
+/* Color change animation */
+@keyframes colorChange {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #44a6fc;
+  }
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+  .main-nav {
+    padding: 15px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links li a {
+    font-size: 20px;
+  }
+}
+
+#welcome,
+#about,
+#portfolio {
+  padding-top: 80px;
+}
+
+#btt {
+  position: fixed;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  bottom: 0;
+  right: 0;
+  opacity: 0.8;
+  width: 50px;
+  transition: margin-bottom 0.6s, opacity 0.6s;
+}
+
+#btt:hover {
+  margin-bottom: 25px;
+  opacity: 1;
+  transition: margin-bottom 0.6s, opacity 0.6s;
+}
+
+/* HOME */
+
+#welcome {
+  font-family: "Amatic SC", cursive;
+  color: #fcffff;
+  background: url("image/7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: auto;
+  padding: 5% 5% 5% 5%;
+}
+/* social media icons */
+#welcome .social {
+  margin: 20px 0;
+  display: flex;
+  gap: 20px;
+}
+
+#welcome .social a {
+  color: white;
+  font-size: 50px;
+  transition: all 0.3s ease;
+}
+
+#welcome .social a:hover {
+  color: #fd7fff;
+  transform: scale(1.2);
+}
+.resume-btn {
+  margin-left: 20px;
+}
+
+.download-resume {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+
+  padding: 8px 20px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-family: "Amatic SC", cursive;
+  margin-top: 40px;
+  font-size: 28px;
+  width: 200px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.download-resume:hover {
+  color: aqua;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.download-resume i {
+  font-size: 16px;
+}
+
+.main-nav {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .download-resume {
+    padding: 6px 15px;
+    font-size: 18px;
+  }
+}
+
+#welcome h1,
+#skillid,
+#certificateid,
+#aboutid,
+#contactid,
+#portfolio h1 {
+  font-size: 6vw;
+  font-weight: bold;
+  animation: moveAndColor 3s ease-in-out infinite;
+}
+@keyframes moveAndColor {
+  0% {
+    transform: translateX(-10px);
+    color: white;
+  }
+  50% {
+    transform: translateX(30px);
+    color: #bb57ed;
+  }
+  100% {
+    transform: translateX(-10px);
+    color: white;
+  }
+}
+#welcome h3,
+#portfolio h3 {
+  font-size: 20pt;
+}
+
+/* DOWN ARROW */
+
+#press {
+  width: 300px;
+  border: solid 4px white;
+  border-radius: 40px;
+  margin-top: 5%;
+  transition: all 0.8s ease;
+}
+
+#press:hover {
+  background-color: #5bc2b4;
+  transform: scale(1.2);
+  margin-top: 100px;
+}
+
+/* ABOUT */
+
+#about {
+  background-color: #14032f;
+  padding: 5% 5% 5% 5%;
+  height: 100vh;
+  width: auto;
+}
+
+#about h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: 90pt;
+  font-weight: bold;
+  text-align: left;
+}
+
+#about p {
+  text-align: left;
+  line-height: 3;
+  font-size: 1.1em;
+}
+
+#email {
+  background-color: #26816e;
+  padding: 2% 2% 2% 2%;
+  border-radius: 40px;
+  transition: all 0.5s ease;
+  color: white;
+}
+
+#portScroll {
+  background-color: #26816e;
+  padding: 2% 2% 2% 2%;
+  border-radius: 40px;
+  margin-left: 2%;
+  transition: all 0.5s ease;
+  color: white;
+}
+
+#about img {
+  text-align: left;
+  margin-right: 10px;
+  width: 18px;
+  transition: transform 0.5s ease;
+}
+
+#portScroll a,
+#portScroll a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+#email:hover,
+#portScroll:hover {
+  box-shadow: 8px 20px 35px #000000;
+  background-color: #063a0f;
+  transform: scale(1.2);
+  color: #68bdca;
+  cursor: pointer;
+}
+
+#portScroll:hover a {
+  color: #68bdca;
+}
+
+#portScroll:hover img {
+  transform: scale(1.1);
+}
+
+#self img {
+  width: 28%;
+  float: right;
+  border: solid 8px #26816e;
+  border-radius: 2000px;
+  box-shadow: 5px 15px 30px #062928;
+}
+
+.read-more-btn {
+  margin-top: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 20px;
+  border-radius: 40px;
+  color: white;
+  font-family: "Amatic SC", cursive;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*skills  */
+.skill-title {
+  font-size: 1.1em;
+}
+.skills-section {
+  padding: 5% 5% 5% 5%;
+  background: linear-gradient(-100deg, #150223 0%, #a431ce 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  min-height: 60vh;
+  padding-top: 80px;
+}
+
+.skills-section h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: 30pt;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.skillbars {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skill {
+  margin-bottom: 30px;
+}
+
+.skill-title {
+  padding: 5px 10px;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  width: 100px;
+  border-radius: 3px;
+}
+
+.skill-bar {
+  height: 35px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.skill-progress {
+  height: 100%;
+  border-radius: 3px;
+  position: relative;
+  transition: width 1.5s ease-in-out;
+}
+
+.skill-percent {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-weight: bold;
+}
+
+@keyframes skillBarAnimation {
+  0% {
+    width: 0%;
+  }
+  20% {
+    width: var(--skill-percentage);
+  }
+  80% {
+    width: var(--skill-percentage);
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.skill-progress {
+  height: 100%;
+  border-radius: 3px;
+  position: relative;
+
+  animation: skillBarAnimation 5s ease-in-out infinite;
+
+  --skill-percentage: 0%;
+}
+
+.skill:nth-child(1) .skill-progress {
+  --skill-percentage: 95%;
+}
+
+.skill:nth-child(2) .skill-progress {
+  --skill-percentage: 90%;
+}
+
+.skill:nth-child(3) .skill-progress {
+  --skill-percentage: 75%;
+}
+.skill:nth-child(4) .skill-progress {
+  --skill-percentage: 80%;
+}
+
+.skill:nth-child(5) .skill-progress {
+  --skill-percentage: 65%;
+}
+
+.skill:nth-child(6) .skill-progress {
+  --skill-percentage: 75%;
+}
+.skill:nth-child(7) .skill-progress {
+  --skill-percentage: 70%;
+}
+
+/* certificates   */
+
+#certificates {
+  font-family: "Amatic SC", cursive;
+  background: linear-gradient(-1deg, #040a5e 0%, #542d8b 100%);
+  min-height: 100vh;
+  width: auto;
+}
+
+#certificates h1 {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.certificates-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.certificate-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  width: 450px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 1);
+  background-color: #a655e8;
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.certificate-card h3 {
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.certificate-card p {
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+.download-cert-btn {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 20px;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  font-family: "Amatic SC", cursive;
+  font-size: 35px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.download-cert-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: aqua;
+  color: #040a5e;
+  box-shadow: 8px 8px 6px rgba(0, 0, 0, 0.9);
+}
+
+@media screen and (max-width: 768px) {
+  .certificates-container {
+    flex-direction: column;
+  }
+
+  .certificate-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* PORTFOLIO */
+
+#portfolio {
+  font-family: "Amatic SC", cursive;
+  background-color: #1f0d37;
+  text-decoration: none;
+  color: white;
+  padding: 5% 5% 5% 5%;
+  width: auto;
+  height: auto;
+}
+
+#portfolio h3 {
+  font-family: "Roboto Slab", serif;
+  font-size: 15pt;
+}
+
+#port img {
+  margin: 10px;
+  width: 500px;
+  opacity: 0.7;
+  transition: all 0.5s ease;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  background: linear-gradient(to top, transparent 0%, transparent 100%);
+}
+
+#port img:hover {
+  opacity: 1;
+  transform: translateY(-20px) rotateY(10deg) rotateZ(3deg);
+  box-shadow: 0px 30px 40px rgba(117, 119, 253, 0.7),
+    0px 0px 20px rgba(55, 102, 141, 0.713);
+  filter: contrast(1.2);
+}
+
+/* contact me */
+
+#contact {
+  font-family: "Amatic SC", cursive;
+  background-color: #3c1766;
+  padding: 5% 5% 5% 5%;
+  min-height: 50vh;
+  width: auto;
+}
+
+#contact h1 {
+  font-size: 60pt;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: none;
+}
+
+.form-group label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-bottom-color: #68bdca;
+  outline: none;
+}
+
+.form-group input:focus ~ label,
+.form-group textarea:focus ~ label,
+.form-group input:valid ~ label,
+.form-group textarea:valid ~ label {
+  top: -20px;
+  left: 0;
+  font-size: 12px;
+  color: #68bdca;
+}
+
+.submit-btn {
+  background: rgba(104, 189, 202, 0.2);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(104, 189, 202, 0.3);
+  padding: 12px 30px;
+  border-radius: 25px;
+  color: white;
+  font-family: "Amatic SC", cursive;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background: rgba(1, 221, 255, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn i {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover i {
+  transform: translateX(5px);
+}
+
+@media screen and (max-width: 768px) {
+  .contact-form {
+    padding: 20px;
+  }
+
+  #contact h1 {
+    font-size: 32pt;
+  }
+}
+
+.footer {
+  background-color: #070e0f;
+  padding: 30px 0;
+  font-family: "Amatic SC", cursive;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-btn {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 25px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-btn i {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.call-btn:hover {
+  background: rgba(104, 202, 104, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(104, 202, 104, 0.3);
+}
+
+.email-btn:hover {
+  background: rgba(104, 189, 202, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(104, 189, 202, 0.3);
+}
+
+.contact-btn:hover i {
+  transform: scale(1.2);
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-btn {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+}
